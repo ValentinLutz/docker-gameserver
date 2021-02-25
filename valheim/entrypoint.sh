@@ -1,8 +1,8 @@
 #!/bin/bash
 
 steamcmd +login anonymous \
-	+force_install_dir "${STEAMAPPDIR}" \
-	+app_update "${STEAMAPPID}" \
+	+force_install_dir ${STEAMAPP_DIR} \
+	+app_update ${STEAMAPP_ID} \
 	+quit
 
-bash "${STEAMAPPDIR}/start_server_custom.sh"
+${STEAMAPPDIR}/start_server_custom.sh

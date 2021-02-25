@@ -1,12 +1,12 @@
 FROM vlutz/steamcmd:ubuntu-18.04
 
-ENV STEAMAPPID 896660
+ENV STEAMAPP_ID 896660
 ENV STEAMAPP valheim
-ENV STEAMAPPDIR ${HOME_DIR}/${STEAMAPP}-dedicated
+ENV STEAMAPP_DIR ${HOME_DIR}/${STEAMAPP}-dedicated
 
 RUN steamcmd +login anonymous \
-    +force_install_dir "${STEAMAPPDIR}" \
-    +app_update "${STEAMAPPID}" \
+    +force_install_dir "${STEAMAPP_DIR}" \
+    +app_update "${STEAMAPP_ID}" \
     +quit
 
 ENV SERVER_NAME=NewWorldServer \
@@ -14,9 +14,9 @@ ENV SERVER_NAME=NewWorldServer \
     SERVER_WORLD=NewWorld \
     SERVER_PASSWORD=1234567
 
-COPY ./start_server_custom.sh ${STEAMAPPDIR}
+COPY ./start_server_custom.sh ${STEAMAPP_DIR}
 
-WORKDIR ${STEAMAPPDIR}
+WORKDIR ${STEAMAPP_DIR}
 ENTRYPOINT ["bash", "start_server_custom.sh"]
 
 EXPOSE 2456/udp \
