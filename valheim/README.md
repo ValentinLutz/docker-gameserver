@@ -6,7 +6,6 @@
 
 ```shell
 docker run \
-    --name valheim-server \
     -v $(pwd)/config:/home/steam/.config/unity3d/IronGate/Valheim \
     -v $(pwd)/game:/home/steam/valheim-dedicated \
     -p 2456-2458:2456-2458/udp
@@ -17,7 +16,6 @@ docker run \
 
 ```shell
 docker run \
-    --name valheim-server \
     -v $(pwd)/config:/home/steam/.config/unity3d/IronGate/Valheim \
     -v valheim-files:/home/steam/valheim-dedicated \
     -p 2456-2458:2456-2458/udp \
@@ -38,7 +36,7 @@ services:
       - valheim-files:/home/steam/valheim-dedicated
 ```
 
-## Environment Variables
+## Configuration Environment Variables
 
 | Name            | Description                                                                | Default Value  |
 | --------------- | -------------------------------------------------------------------------- | -------------- |
