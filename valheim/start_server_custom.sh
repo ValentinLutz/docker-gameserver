@@ -12,6 +12,7 @@ echo "Starting server PRESS CTRL-C to exit"
 ./valheim_server.x86_64 -name ${SERVER_NAME} \
     -port ${SERVER_PORT} \
     -world ${SERVER_WORLD} \
-    -password ${SERVER_PASSWORD}
+    -password ${SERVER_PASSWORD} \
+    -public ${SERVER_PUBLIC}
 
 export LD_LIBRARY_PATH=$templdpath

@@ -38,9 +38,10 @@ services:
 
 ## Configuration Environment Variables
 
-| Name            | Description                                                                | Default Value  |
-| --------------- | -------------------------------------------------------------------------- | -------------- |
-| SERVER_NAME     | Name of the server that will show inside the server browser                | NewWorldServer |
-| SERVER_PORT     | UDP start port that the server will listen to inside the container         | 2456           |
-| SERVER_WORLD    | Name of the world without file extensions                                  | NewWorld       |
-| SERVER_PASSWORD | Password for connecting to the server - !must be minat least 5 characters! | 1234567        |
+| Name            | Description                                                           | Default Value  |
+| --------------- | --------------------------------------------------------------------- | -------------- |
+| SERVER_NAME     | Name of the server that will show inside the server browser           | NewWorldServer |
+| SERVER_PORT     | UDP start port that the server will listen to inside the container    | 2456           |
+| SERVER_WORLD    | Name of the world without file extensions                             | NewWorld       |
+| SERVER_PASSWORD | Password for connecting to the server (must be at least 5 characters) | 1234567        |
+| SERVER_PUBLIC   | Shows server on the public server list (1=true, 0=false)              | 0              |

@@ -8,7 +8,8 @@ ENV CONFIG_DIR ${HOME_DIR}/.config/unity3d/IronGate/Valheim
 ENV SERVER_NAME=NewWorldServer \
     SERVER_PORT=2456 \
     SERVER_WORLD=NewWorld \
-    SERVER_PASSWORD=1234567
+    SERVER_PASSWORD=1234567 \
+    SERVER_PUBLIC=0
 
 COPY ./start_server_custom.sh ${HOME_DIR}
 COPY ./entrypoint.sh ${HOME_DIR}
