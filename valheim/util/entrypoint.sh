@@ -5,7 +5,7 @@ steamcmd +login anonymous \
     +app_update "${STEAMAPP_ID}" \
     +quit
 
-mv ${HOME_DIR}/start_server_custom.sh ${STEAMAPP_DIR}/start_server_custom.sh
+cp /home/${USER}/start_valheim_server.sh ${STEAMAPP_DIR}
 
 cd ${STEAMAPP_DIR}
-bash ./start_server_custom.sh
+bash ./start_valheim_server.sh
