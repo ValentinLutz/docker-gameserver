@@ -1,4 +1,4 @@
-FROM vlutz/steamcmd:ubuntu-16.04
+FROM vlutz/steamcmd:ubuntu-18.04
 
 ENV STEAMAPP_ID 896660
 ENV STEAMAPP valheim
@@ -11,8 +11,8 @@ ENV SERVER_NAME=NewWorldServer \
     SERVER_PASSWORD=1234567 \
     SERVER_PUBLIC=0
 
-COPY ./start_valheim_server.sh /home/${USER}
-COPY ./entrypoint.sh /home/${USER}
+COPY ./util/start_valheim_server.sh /home/${USER}
+COPY ./util/entrypoint.sh /home/${USER}
 
 WORKDIR /home/${USER}
 ENTRYPOINT ["bash", "entrypoint.sh"]
